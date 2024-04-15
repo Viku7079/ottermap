@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "vendor-chunks/color-rgba";
+exports.ids = ["vendor-chunks/color-rgba"];
+exports.modules = {
+
+/***/ "(ssr)/./node_modules/color-rgba/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/color-rgba/index.js ***!
+  \******************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ rgba)\n/* harmony export */ });\n/* harmony import */ var color_parse__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! color-parse */ \"(ssr)/./node_modules/color-parse/index.js\");\n/* harmony import */ var color_space_rgb_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! color-space/rgb.js */ \"(ssr)/./node_modules/color-space/rgb.js\");\n/* harmony import */ var color_space_hsl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! color-space/hsl.js */ \"(ssr)/./node_modules/color-space/hsl.js\");\n/** @module  color-rgba */\n\n\n\n\nfunction rgba(color) {\n\t// template literals\n\tif (Array.isArray(color) && color.raw) color = String.raw(...arguments)\n\tif (color instanceof Number) color = +color\n\n\tvar values, i, l\n\n\t//attempt to parse non-array arguments\n\tvar parsed = (0,color_parse__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(color)\n\n\tif (!parsed.space) return []\n\n\tconst min = parsed.space[0] === 'h' ? color_space_hsl_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].min : color_space_rgb_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].min\n\tconst max = parsed.space[0] === 'h' ? color_space_hsl_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].max : color_space_rgb_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].max\n\n\tvalues = Array(3)\n\tvalues[0] = Math.min(Math.max(parsed.values[0], min[0]), max[0])\n\tvalues[1] = Math.min(Math.max(parsed.values[1], min[1]), max[1])\n\tvalues[2] = Math.min(Math.max(parsed.values[2], min[2]), max[2])\n\n\tif (parsed.space[0] === 'h') {\n\t\tvalues = color_space_hsl_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].rgb(values)\n\t}\n\n\tvalues.push(Math.min(Math.max(parsed.alpha, 0), 1))\n\n\treturn values\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9ub2RlX21vZHVsZXMvY29sb3ItcmdiYS9pbmRleC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7QUFDK0I7QUFDSztBQUNBOztBQUVyQjtBQUNmO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBLGNBQWMsdURBQUs7O0FBRW5COztBQUVBLHVDQUF1QywwREFBRyxPQUFPLDBEQUFHO0FBQ3BELHVDQUF1QywwREFBRyxPQUFPLDBEQUFHOztBQUVwRDtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBLFdBQVcsMERBQUc7QUFDZDs7QUFFQTs7QUFFQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbXktb3BlbmxheWVycy1wcm9qZWN0Ly4vbm9kZV9tb2R1bGVzL2NvbG9yLXJnYmEvaW5kZXguanM/YjM1MCJdLCJzb3VyY2VzQ29udGVudCI6WyIvKiogQG1vZHVsZSAgY29sb3ItcmdiYSAqL1xuaW1wb3J0IHBhcnNlIGZyb20gJ2NvbG9yLXBhcnNlJ1xuaW1wb3J0IHJnYiBmcm9tICdjb2xvci1zcGFjZS9yZ2IuanMnXG5pbXBvcnQgaHNsIGZyb20gJ2NvbG9yLXNwYWNlL2hzbC5qcydcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gcmdiYShjb2xvcikge1xuXHQvLyB0ZW1wbGF0ZSBsaXRlcmFsc1xuXHRpZiAoQXJyYXkuaXNBcnJheShjb2xvcikgJiYgY29sb3IucmF3KSBjb2xvciA9IFN0cmluZy5yYXcoLi4uYXJndW1lbnRzKVxuXHRpZiAoY29sb3IgaW5zdGFuY2VvZiBOdW1iZXIpIGNvbG9yID0gK2NvbG9yXG5cblx0dmFyIHZhbHVlcywgaSwgbFxuXG5cdC8vYXR0ZW1wdCB0byBwYXJzZSBub24tYXJyYXkgYXJndW1lbnRzXG5cdHZhciBwYXJzZWQgPSBwYXJzZShjb2xvcilcblxuXHRpZiAoIXBhcnNlZC5zcGFjZSkgcmV0dXJuIFtdXG5cblx0Y29uc3QgbWluID0gcGFyc2VkLnNwYWNlWzBdID09PSAnaCcgPyBoc2wubWluIDogcmdiLm1pblxuXHRjb25zdCBtYXggPSBwYXJzZWQuc3BhY2VbMF0gPT09ICdoJyA/IGhzbC5tYXggOiByZ2IubWF4XG5cblx0dmFsdWVzID0gQXJyYXkoMylcblx0dmFsdWVzWzBdID0gTWF0aC5taW4oTWF0aC5tYXgocGFyc2VkLnZhbHVlc1swXSwgbWluWzBdKSwgbWF4WzBdKVxuXHR2YWx1ZXNbMV0gPSBNYXRoLm1pbihNYXRoLm1heChwYXJzZWQudmFsdWVzWzFdLCBtaW5bMV0pLCBtYXhbMV0pXG5cdHZhbHVlc1syXSA9IE1hdGgubWluKE1hdGgubWF4KHBhcnNlZC52YWx1ZXNbMl0sIG1pblsyXSksIG1heFsyXSlcblxuXHRpZiAocGFyc2VkLnNwYWNlWzBdID09PSAnaCcpIHtcblx0XHR2YWx1ZXMgPSBoc2wucmdiKHZhbHVlcylcblx0fVxuXG5cdHZhbHVlcy5wdXNoKE1hdGgubWluKE1hdGgubWF4KHBhcnNlZC5hbHBoYSwgMCksIDEpKVxuXG5cdHJldHVybiB2YWx1ZXNcbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(ssr)/./node_modules/color-rgba/index.js\n");
+
+/***/ })
+
+};
+;
